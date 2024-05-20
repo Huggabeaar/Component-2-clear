@@ -1,0 +1,75 @@
+.slider-container {
+  position: relative;
+  width: 1140px;
+  height: 360px;
+  overflow: hidden;
+  margin: 0 auto; /* Центрирование по горизонтали */
+}
+
+.slider {
+  display: flex;
+  width: 3420px; /* Ширина всех слайдов */
+  transition: transform 0.5s ease; /* Плавное переключение слайдов */
+}
+
+.slider img {
+  width: 1140px;
+  height: 360px;
+}
+
+.slider a {
+  display: inline-block; 
+}
+
+.tabs-container {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.tabs {
+  display: block;
+}
+
+.tab {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #949494;
+  border-radius: 999px;
+  margin: 0 3px;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.tab.active {
+  background-color: #B91F2A;
+  border: 1px solid #B91F2A;
+}
+
+/* Для ширины экрана до 425px */
+@media (max-width: 425px) {
+  .slider-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .slider {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .slider img {
+    width: 40%;
+    height: auto;
+  }
+
+  .tabs-container {
+    margin-top: 10px;
+  }
+
+  .tab {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+  }
+}
